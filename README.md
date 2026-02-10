@@ -6,11 +6,13 @@ Simple rules & commands — smarter Cursor.
 
 | Rule | What it does |
 |------|-------------|
+| `ask-before-acting` | Asks clarifying questions before starting any task |
 | `git-safety` | Blocks automatic git commands — always asks first |
 | `pr-code-review` | Challenge-first code review before publishing PRs |
 | `feature-implementation` | 4-phase planning methodology for complex features |
 | `docs-location` | Keeps docs organized by purpose |
 | `mcp-tool-definition` | Standardized MCP tool documentation |
+
 
 ## Commands (`.cursor/commands/`)
 
