@@ -18,10 +18,11 @@ Simple rules & commands — smarter Cursor.
 
 | Command | What it does |
 |---------|-------------|
-| `create-pr` | Create a pull request with structured description |
-| `self-review` | Self-review changes before submitting |
-| `handle-pr-comments` | Address PR review comments |
 | `back-to-master-delete-branch` | Clean up after merge |
+| `create-pr` | Create a pull request with structured description |
+| `handle-pr-comments` | Address PR review comments |
+| `optimize-cursor-context` | Read-only audit of always-on agent context (rules, skills, plugins, git noise) plus token estimates and optimization ideas |
+| `self-review` | Self-review changes before submitting |
 
 ## Usage
 
