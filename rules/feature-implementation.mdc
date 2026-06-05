@@ -1,0 +1,138 @@
+---
+description: Structured approach for complex feature implementation with mandatory planning and user approval 
+globs:
+alwaysApply: false
+---
+
+# Feature Implementation Methodology
+
+## Overview
+This rule provides a systematic approach for implementing complex features that require deep understanding of existing codebase, design systems, and user requirements.
+
+### Required Process:
+1. **Complete All Planning First** (Phases 1-3)
+2. **Create Comprehensive Planning Document**  
+3. **Present Plan to User for Approval**
+4. **Wait for Explicit User Approval Before Implementation**
+5. **Only Then Begin Implementation** (Phase 4)
+
+## Phase 1: Discovery & Learning
+
+### 1.1 Understand the Context
+- **Learn Existing Codebase**: Use `codebase_search` to understand related components and patterns
+- **Architecture Patterns**: Identify existing architectural patterns and conventions
+- **Reusable Components**: Find existing functionality that can be leveraged
+
+### 1.2 Learn the Requirements
+- **Parse Requirements**: Break down functional requirements into specific behaviors
+- **User Experience**: Understand interaction patterns and user flows
+- **Design Specifications**: Learn design requirements using design system tools
+- **Edge Cases**: Identify complex scenarios and error conditions
+
+### 1.3 Learn the Design System
+- **Component Discovery**: Use design system MCPs to find matching components
+- **Design Tokens**: Map requirements to available design tokens and patterns
+- **UI Consistency**: Ensure alignment with existing design patterns
+
+## Phase 2: Analysis & Planning
+
+### 2.1 Gap Analysis
+- **Current vs Required**: Document what exists vs what needs to be built
+- **Technical Debt**: Assess any refactoring or improvements needed
+- **Dependencies**: Identify external dependencies and constraints
+
+### 2.2 Technical Architecture Planning
+- **Data Flow**: Design state management and data flow patterns
+- **Flexibility**: Plan for configurability and extensibility
+- **Real-time Updates**: Consider dynamic behavior requirements
+- **Maintainability**: Design for long-term maintenance and testing
+
+### 2.3 Implementation Strategy
+- **Task Breakdown**: Divide complex work into manageable pieces
+- **Implementation Order**: Plan sequence considering dependencies
+- **Testing Strategy**: Plan unit, integration, and e2e testing approach
+- **Error Handling**: Design robust error handling and fallback behaviors
+
+## Phase 3: Documentation & Task Management
+
+### 3.1 Create Planning Document
+- **Document Findings**: Capture all research and analysis
+- **Architecture Decisions**: Record technical choices with reasoning
+- **Alternative Analysis**: Document options considered and why they were rejected
+- **Implementation Clarity**: Ensure plan is detailed enough for implementation
+
+### 3.2 Create Todo List
+- **Use `todo_write` tool**: Create structured, actionable task list
+- **Specific Tasks**: Break down into concrete, measurable items
+- **Dependencies**: Link related tasks and prerequisites
+- **Priority Order**: Organize by implementation sequence
+
+### 3.3 Present Plan for Approval
+- **Present Complete Plan**: Share the planning document and todo list with user
+- **Request Explicit Approval**: Ask user to review and approve the approach
+- **Address Feedback**: Incorporate any user feedback before proceeding
+
+## Phase 4: Implementation Execution
+
+This phase only begins after explicit user approval of the planning document.
+
+### 4.1 Final Validation
+- **User Approval Confirmed**: Verify user has approved the plan
+- **Address User Feedback**: Incorporate any final feedback from user review
+- **Zero Assumptions**: Confirm 100% clarity on all requirements
+- **Technical Validation**: Verify approach aligns with codebase patterns
+
+### 4.2 Implementation Guidelines
+- **Follow Existing Patterns**: Maintain consistency with codebase conventions
+- **Incremental Development**: Build and test in small, verifiable increments
+- **Code Quality**: Apply clean code principles and proper typing
+- **Documentation**: Add appropriate comments for complex business logic
+
+## Key Principles
+
+### Research-Driven Development
+- Always understand before implementing
+- Use multiple search strategies to gather comprehensive information
+- Validate assumptions through code exploration
+
+### Pattern Consistency
+- Follow established codebase patterns and conventions
+- Reuse existing components and utilities when possible
+- Maintain architectural consistency
+
+### Future-Proof Design
+- Design for maintainability and extensibility
+- Consider how requirements might evolve
+- Build flexible, configurable solutions
+
+### Decision Documentation
+- Record reasoning behind technical choices
+- Document alternatives considered
+- Explain complex business logic decisions
+
+## Implementation Checklist
+
+Before requesting user approval for implementation:
+- [ ] All related code components have been discovered and understood
+- [ ] Design system components have been identified and mapped
+- [ ] Technical architecture has been planned and documented
+- [ ] Task breakdown is complete with clear dependencies
+- [ ] All assumptions have been validated or eliminated
+- [ ] Implementation plan is detailed enough for execution
+- [ ] Testing strategy has been defined
+- [ ] Error handling approach has been planned
+- [ ] **Planning document has been created and presented to user**
+- [ ] **User has provided explicit approval to proceed**
+
+## Anti-Patterns to Avoid
+- **Starting implementation without user approval of the plan**
+- Starting implementation without full understanding
+- Making assumptions about existing code behavior
+- Ignoring established codebase patterns
+- Building monolithic components instead of composable ones
+- Skipping planning documentation for complex features
+- Not considering future extensibility needs
+
+---
+
+This methodology ensures thorough preparation before implementation, leading to more maintainable, well-architected solutions that integrate seamlessly with existing codebases. 

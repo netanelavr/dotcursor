@@ -1,0 +1,37 @@
+---
+description: 
+globs: 
+alwaysApply: false
+---
+## MCP Tool Definitions
+
+When adding or editing an MCP Server's tool, follow this structure to make it clear when and how the tool should be used:
+
+### Tool Title
+The title should clearly indicate what the tool accomplishes or produces. Focus on the outcome or capability - what will it do for the user?
+Examples:
+- "Analyze Stock Performance Metrics" (not "Stock Analysis Tool")
+- "Generate Portfolio Risk Assessment" (not "Risk Calculator Tool")
+- "Fetch Real-time Market Data" (not "Market Data Fetcher")
+
+### Tool Description
+The description should cover four key aspects:
+1. **What is it?** - Brief explanation of the tool's purpose
+2. **What does it do?** - Functionality explanation  
+3. **When to use it?** - Clear use cases and scenarios
+4. **What it returns/effects?** - Expected outputs or side effects
+
+Descriptions should be comprehensive enough for an AI agent to understand when this tool is the appropriate choice over others.
+Example format:
+```
+"This tool [what it is] that [what it does]. Use this when [when to use it, specific scenarios]. 
+The tool will [what it returns/effects]. [Additional context or limitations if relevant]."
+```
+
+### Example:
+```
+"This tool analyzes stock fundamental metrics that calculates P/E ratios, debt-to-equity ratios, and growth rates. 
+Use this when evaluating investment opportunities, comparing company valuations, or screening stocks for portfolio inclusion. 
+The tool will return a comprehensive financial health score and detailed breakdown of key metrics. 
+Note: Data is based on the most recent quarterly reports and may not reflect real-time market conditions."
+```

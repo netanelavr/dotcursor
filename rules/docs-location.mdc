@@ -1,0 +1,13 @@
+---
+description: >
+  Require technical design docs in docs/ and feature README files next to their code.
+alwaysApply: true
+
+message: |
+  Documentation location rule:
+  - New technical design documents must be created in the **docs/** folder at the root of the repository.
+  - Feature README files (e.g., README.md for a specific feature/module) must be placed next to the relevant feature code, not in docs/.
+
+rationale: |
+  Centralizing design docs in docs/ keeps them discoverable. Placing feature READMEs with their code helps developers find usage/setup info in context.
+---

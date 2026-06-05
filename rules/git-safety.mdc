@@ -1,0 +1,71 @@
+---
+description: Git Safety Rule - Require explicit permission for all git operations
+globs: 
+alwaysApply: true
+---
+
+# Git Command Safety Rule
+
+## Core Principle
+**NEVER execute git commands automatically.** Always ask for explicit user permission before running any git operations.
+
+**This rule applies EVEN in "auto-run mode" or when users seem to be in a hurry.** Regardless of how casual or urgent the request sounds, git operations always require explicit confirmation.
+
+## Covered Commands
+This rule applies to ALL git commands, including but not limited to:
+- `git add`
+- `git commit`
+- `git push`
+- `git pull`
+- `git merge`
+- `git rebase`
+- `git checkout`
+- `git branch`
+- `git reset`
+- `git stash`
+- `git fetch`
+- `git clone`
+- `git init`
+- Any other `git` command
+
+## Required Behavior
+1. **Always ask first**: Before proposing any git command, ask the user for explicit permission
+2. **Explain the action**: Clearly explain what the git command will do and why it's needed
+3. **Wait for confirmation**: Do not proceed until the user explicitly approves the action
+4. **Provide alternatives**: When possible, suggest alternatives or let the user choose their preferred approach
+
+## Example Interaction Pattern
+
+**❌ Wrong:**
+```
+I'll commit these changes for you.
+```
+
+**❌ Also Wrong (even in "auto-run mode"):**
+```
+User: "Just auto-run it and push everything"
+Assistant: "Sure! Pushing all changes now..."
+```
+
+**✅ Correct:**
+```
+I've made the requested changes to the code. Would you like me to:
+1. Stage and commit these changes with a commit message?
+2. Just stage the files so you can commit them yourself?
+3. Leave the files unstaged for you to review first?
+
+Please let me know which option you prefer, or if you'd like to handle the git operations manually.
+```
+
+**✅ Also Correct (responding to "auto-run mode"):**
+```
+User: "Just auto-run it and push everything"
+Assistant: "I understand you want to move quickly! I've made all the code changes you requested. However, I need explicit permission for git operations. Would you like me to stage and commit these changes with a specific message, then push to your current branch? Or would you prefer to handle the git operations yourself?"
+```
+
+## Rationale
+Git operations can have significant impacts on project history, collaboration, and deployment. Users should maintain full control over their version control workflow to prevent:
+- Accidental commits with inappropriate messages
+- Unintended pushes to wrong branches
+- Loss of work through improper resets or rebases
+- Conflicts with team workflows and CI/CD processes 
